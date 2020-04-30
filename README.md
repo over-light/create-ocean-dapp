@@ -37,6 +37,11 @@ npm start
 ```
 check package.json for necessary scripts 
 
+### Philosophy
+Package template was created as a way to get quickly started building Ocean protocol powered dapps without much hassle of dev dependencies and other setups ,dapp could be server side,client side or only as smart contracts also.
+This package Template includes example dapp template built using ocean protocol demonstrating frontend,backend and contract dapps example
+This is still under developement and after few suggestions it will be improved with more scripts to handle all processes from one root directory
+
 ### 🏖 Remote Ocean: Pacific
 
 To make use of all the functionality, you need to connect to an Ocean network.
@@ -268,3 +273,13 @@ You can execute the script using {major|minor|patch} as first argument to bump t
 By creating the Git tag with these tasks, Travis will trigger a new Kubernetes live deployment automatically, after a successful tag build.
 
 For the GitHub releases steps a GitHub personal access token, exported as `GITHUB_TOKEN` is required. [Setup](https://github.com/release-it/release-it#github-releases)
+
+### Task - list - TODO
+
+- [ ] More scripts in directory of template
+- [ ] More tools and contracts to be added
+- [ ] support for graph to be added
+
+### Acknowledgements
+Thanks to Ocean Protocol team for all open source code they contributed on github.
+other developers who keep building tools day and night to help others with development.
