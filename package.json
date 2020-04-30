@@ -7,9 +7,7 @@
     "web3",
     "truffle",
     "trufflesuite",
-    "truffleframework",
     "react",
-    "ganache",
 	"Ocean-protocol"
   ],
   "engines": {
