@@ -2,9 +2,9 @@
 
 ## Build dapps with ocean protocol quickly
 
-If something doesn't work, please [file an issue](https://github.com/snaketh4x0r/create-ocean-dapp/issues)
+If something doesn’t work, please [file an issue](https://github.com/snaketh4x0r/create-ocean-dapp/issues)
 
-**Note:You'll need to have Node>=8.0.0 and NPM>=5.2 or  later version on your local development machine** 
+**Note:You’ll need to have Node>=8.0.0 and NPM>=5.2 or  later version on your local development machine** 
 
 ## Quickstart
 
@@ -18,7 +18,7 @@ npm install
 This gets a basic react app running on your localhost
 Open [http://localhost:3000](http://localhost:3000) to view the client in the browser. The page will reload if you make edits to files in either `./client` or `./server`.
 
-### ?? Remote Ocean: Pacific
+### 🏖 Remote Ocean: Pacific
 
 To make use of all the functionality, you need to connect to an Ocean network.
 
@@ -28,47 +28,47 @@ By default, the client uses a burner wallet connected to the correct network aut
 
 1. select Custom RPC in the network dropdown in MetaMask
 2. under New Network, enter `https://pacific.oceanprotocol.com` as the custom RPC URL
-3. Hit _Save_, and you're now connected to Pacific
+3. Hit _Save_, and you’re now connected to Pacific
 
 ## Directory structure
 
 ```
 my-ocean-app
-??? README.md
-??? scripts
-??? package.json
-??? .gitignore
-??? template
-    ??? dapp
-    ?   ??? README.json
-    ?   ??? package.json
-    ?   ??? contracts
-    ?       
-    ??? client
-    ?   ??? README.md
-    ?   ??? package.json
-    ?   ??? node_modules
-    ?   ??? public
-    ?   ?   ??? favicon.ico
-    ?   ?   ??? index.html
-    ?   ?   ??? manifest.json
-    ?   ??? src
-    ?       ??? App.css
-    ?       ??? App.js
-    ?       ??? App.test.js
-    ?       ??? index.css
-    ?       ??? index.js
-    ?       ??? serviceWorker.js
-    ?       ??? setupTests.js
-    ??? server
-        |??  src
-        |    |??server.js
-        |    |??config.js
-        |??  test
-        |??  package.json
+├── README.md
+├── scripts
+├── package.json
+├── .gitignore
+└── template
+    ├── dapp
+    │   ├── README.json
+    │   ├── package.json
+    │   └── contracts
+    │       
+    ├── client
+    │   ├── README.md
+    │   ├── package.json
+    │   ├── node_modules
+    │   ├── public
+    │   │   ├── favicon.ico
+    │   │   ├── index.html
+    │   │   └── manifest.json
+    │   └── src
+    │       ├── App.css
+    │       ├── App.js
+    │       ├── App.test.js
+    │       ├── index.css
+    │       ├── index.js
+    │       ├── serviceWorker.js
+    │       └── setupTests.js
+    └── server
+        |──  src
+        |    |──server.js
+        |    |──config.js
+        |──  test
+        |──  package.json
 ```
 
-### ?? Use with Barge
+### 🐳 Use with Barge
 
 If you prefer to connect to locally running components instead of remote connections to Ocean's Nile network, you can spin up [`barge`](https://github.com/oceanprotocol/barge) and use a local Spree network:
 
@@ -80,7 +80,7 @@ cd barge
 ./start_ocean.sh --no-commons
 ```
 
-Then set [environment variables](#?-environment-variables) to use those local connections.
+Then set [environment variables](#️-environment-variables) to use those local connections.
 
 Finally, you need to copy the generated contract artifacts out of the Docker container. To do this, execute this script in another terminal:
 
@@ -105,7 +105,7 @@ Then use this host for the local Aquarius url in the client config:
 REACT_APP_AQUARIUS_URI="http://aquarius:5000"
 ```
 
-### ?? Environment Variables
+### ⛵️ Environment Variables
 
 #### Client
 
@@ -162,7 +162,7 @@ Beside configuring the network endpopints, the client allows to activate some fe
 | `REACT_APP_IPFS_NODE_URI`                                             | `"https://ipfs.oceanprotocol.com:443"` | The IPFS node URI used to add files to IPFS.      |
 | `REACT_APP_REPORT_EMAIL`                                              | `"jelly@mcjellyfish.com"`              | The email used for the _report an asset_ feature. |
 
-## ????? Testing
+## 👩‍🔬 Testing
 
 Test suite is setup with [Jest](https://jestjs.io) and [react-testing-library](https://github.com/kentcdodds/react-testing-library) for unit testing, and [Cypress](https://www.cypress.io) for integration testing.
 
@@ -172,7 +172,7 @@ To run all linting, unit and integration tests in one go, run:
 npm test
 ```
 
-The endpoints the integration tests run against are defined by your [Environment Variables](#?-Environment-Variables), and Cypress-specific variables in `cypress.json`.
+The endpoints the integration tests run against are defined by your [Environment Variables](#️-Environment-Variables), and Cypress-specific variables in `cypress.json`.
 
 ### Unit Tests
 
@@ -208,7 +208,7 @@ You can also use the UI of Cypress to run and inspect the integration tests loca
 npm run cypress:open
 ```
 
-## ? Code Style
+## ✨ Code Style
 
 For linting and auto-formatting you can use from the root of the project:
 
@@ -220,7 +220,7 @@ npm run lint
 npm run format
 ```
 
-## ?? Production
+## 🛳 Production
 
 To create a production build of both, the client and the server, run from the root of the project:
 
@@ -230,7 +230,7 @@ npm run build
 
 Builds the client for production to the `./client/build` folder, and the server into the `./server/dist` folder.
 
-## ?? Releases
+## ⬆️ Releases
 
 From a clean `master` branch you can run any release task doing the following:
 
