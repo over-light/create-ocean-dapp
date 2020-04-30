@@ -1,8 +1,8 @@
 {
-  "title": "Commons",
-  "description": "A marketplace to find and publish open data sets in the Ocean Network.",
+  "title": "create-ocean-dapp",
+  "description": "A sample marketplace to find and publish open data sets in the Ocean Network.",
   "company": "Ocean Protocol Foundation Ltd.",
-  "url": "https://commons.oceanprotocol.com",
+  "url": "https://oceanprotocol.com",
   "social": [
     {
       "title": "Site",
