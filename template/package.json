@@ -1,0 +1,61 @@
+{
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5.2"
+  },
+  "license": "MIT",
+  "//": [
+    "web3 is used for blockchain interaction"
+  ],
+  "dependencies": {
+    
+  },
+  "devDependencies": {
+    "@release-it/bumper": "^1.1.0",
+    "@typescript-eslint/eslint-plugin": "^2.24.0",
+    "@typescript-eslint/parser": "^2.24.0",
+    "auto-changelog": "^1.16.2",
+    "concurrently": "^5.1.0",
+    "cypress": "^4.2.0",
+    "cypress-log-to-output": "^1.0.8",
+    "eslint": "^6.8.0",
+    "eslint-config-oceanprotocol": "^1.5.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-cypress": "^2.10.3",
+    "eslint-plugin-prettier": "^3.1.2",
+    "prettier": "^1.19.1",
+    "prettier-stylelint": "^0.4.2",
+    "release-it": "^13.1.1",
+    "start-server-and-test": "^1.10.10",
+    "stylelint": "^13.2.1",
+    "stylelint-config-bigchaindb": "^1.2.2",
+    "stylelint-config-css-modules": "^2.2.0",
+    "stylelint-config-standard": "^20.0.0",
+    "typescript": "^3.8.3",
+    "babel-eslint": "^8.2.3",
+    "babel-preset-stage-2": "^6.24.1",
+    "eslint-plugin-react": "^7.9.1",
+    "jquery": "^3.3.1",
+    "npm-run-all": "^4.1.3",
+    "popper.js": "^1.14.3"
+  },
+  "scripts": {
+    "install": "./scripts/install.sh",
+    "start": "concurrently \"cd client && npm start\" \"cd server && npm start\"",
+    "build": "./scripts/build.sh",
+    "test": "npm run lint && scripts/test.sh && npm run test:e2e",
+    "test:e2e": "start-test start http-get://localhost:3000 cypress:run",
+    "test:watch": "npm run lint && concurrently \"cd client && npm run test:watch\" \"cd server && npm run test:watch\"",
+    "format:js": "prettier --parser typescript --write '**/*.{js,jsx,ts,tsx}'",
+    "format:css": "prettier-stylelint --ignore-path .gitignore --write --quiet '**/*.{css,scss}'",
+    "format": "npm run format:js && npm run format:css",
+    "lint:css": "stylelint --ignore-path .gitignore './**/*.{css,scss}'",
+    "lint:js": "eslint --ignore-path .gitignore --ignore-path .prettierignore --ext .ts,.tsx .",
+    "lint:fix": "eslint --fix --ignore-path .gitignore --ignore-path .prettierignore --ext .ts,.tsx .",
+    "lint": "npm run lint:js && npm run lint:css",
+    "release": "release-it --non-interactive",
+    "changelog": "auto-changelog -p",
+    "cypress:run": "cypress run --browser chrome",
+    "cypress:open": "cypress open"
+  }
+}

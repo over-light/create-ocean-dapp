@@ -1,0 +1,37 @@
+{
+  "name": "create-ocean-dapp",
+  "version": "1.0.0",
+  "description": "Build Ocean protocol dapps easily",
+  "keywords": [
+    "ethereum",
+    "web3",
+    "truffle",
+    "trufflesuite",
+    "truffleframework",
+    "react",
+    "ganache",
+	"Ocean-protocol"
+  ],
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5.2"
+  },
+  "homepage": "https://github.com/snaketh4x0r/create-ocean-dapp",
+  "bugs": "https://github.com/snaketh4x0r/create-ocean-dapp/issues",
+  "license": "MIT",
+  "author": {
+    "name": "snaketh4x0r"
+  },
+  "bin": "scripts/create-ocean-dapp",
+  "repository": "github:snaketh4x0r/create-ocean-dapp",
+  "files": [
+    "scripts",
+    "template"
+  ],
+  "scripts": {
+    "toc": "markdown-toc -i ./README.md"
+  },
+  "devDependencies": {
+    "markdown-toc": "^1.2.0"
+  }
+}
