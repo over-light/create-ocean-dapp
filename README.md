@@ -18,6 +18,9 @@ npm install
 This gets a basic react app running on your localhost
 Open [http://localhost:3000](http://localhost:3000) to view the client in the browser. The page will reload if you make edits to files in either `./client` or `./server`.
 
+## Ocean Protocol official Docs
+https://docs.oceanprotocol.com/
+
 ### Development Guide
 
 1. if you are developing on contracts then 
