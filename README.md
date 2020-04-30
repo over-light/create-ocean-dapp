@@ -18,6 +18,22 @@ npm install
 This gets a basic react app running on your localhost
 Open [http://localhost:3000](http://localhost:3000) to view the client in the browser. The page will reload if you make edits to files in either `./client` or `./server`.
 
+### Development Guide
+
+1. if you are developing on contracts then 
+```
+cd dapp
+npm imstall
+```
+check package.json for necessary scripts
+
+2. if you are developing a front-end with no smart contract development
+```
+npm install
+npm start
+```
+check package.json for necessary scripts 
+
 ### 🏖 Remote Ocean: Pacific
 
 To make use of all the functionality, you need to connect to an Ocean network.
