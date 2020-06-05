@@ -1,5 +1,5 @@
 {
-  "name": "create-ocean-dapp",
+  "name": "create-ocean-project",
   "version": "1.0.0",
   "description": "Build Ocean protocol dapps easily",
   "keywords": [
@@ -8,7 +8,7 @@
     "truffle",
     "trufflesuite",
     "react",
-	"Ocean-protocol"
+    "Ocean-protocol"
   ],
   "engines": {
     "node": ">=8",
@@ -31,5 +31,8 @@
   },
   "devDependencies": {
     "markdown-toc": "^1.2.0"
+  },
+  "dependencies": {
+    "user": "0.0.0"
   }
 }
