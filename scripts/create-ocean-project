@@ -11,29 +11,19 @@ fi
 
 APP_NAME=$1
 
-echo '**********    Welcome    **********'
-echo '********** 1. CREATE OCEAN DAPP ' $@ ' ***'
+echo '**********    CREATE REACT DAPP    **********'
+echo '********** 1. CREATE REACT APP ' $@ ' ***'
 echo
 npx create-react-app $@
 echo '********** DONE CREATING REACT APP ***********'
 echo '**********************************************'
 echo
-echo '********** 2. CREATING Ocean DAPP LAYER ************'
+echo '********** 2. CREATING DAPP LAYER ************'
 echo
 
 ## Files from /
 mv $TEMPLATE_DIR/.flowconfig  $APP_NAME/
 mv $TEMPLATE_DIR/.npmignore  $APP_NAME/.gitignore
-mv $TEMPLATE_DIR/.eslintrc  $APP_NAME/
-mv $TEMPLATE_DIR/.nvmrc  $APP_NAME/
-mv $TEMPLATE_DIR/.prettierignore $APP_NAME/
-mv $TEMPLATE_DIR/.prettierrc $APP_NAME/
-mv $TEMPLATE_DIR/.stylelintrc $APP_NAME/
-mv $TEMPLATE_DIR/.travis $APP_NAME/
-mv $TEMPLATE_DIR/cypress $APP_NAME/
-mv $TEMPLATE_DIR/docker-compose $APP_NAME/
-mv $TEMPLATE_DIR/library $APP_NAME/
-mv $TEMPLATE_DIR/tsconfig $APP_NAME/
 
 node $TEMPLATE_DIR/../scripts/merge_package.js $TEMPLATE_DIR/ `pwd`/$APP_NAME/
 mv $APP_NAME/README.md $APP_NAME/REACT.md
@@ -42,20 +32,18 @@ mv $TEMPLATE_DIR/TEMPLATE.md  $APP_NAME/README.md
 ## Files from /dapp
 mv $TEMPLATE_DIR/dapp $APP_NAME
 
-## Files from /server
-mv $TEMPLATE_DIR/server $APP_NAME
+## Files from /public
+mv $TEMPLATE_DIR/public/favicon.ico $APP_NAME/public
+mv $TEMPLATE_DIR/public/index.html $APP_NAME/public/index.html
+sed 's/App/dApp/g' $APP_NAME/public/manifest.json > $APP_NAME/public/_manifest.json
+mv $APP_NAME/public/_manifest.json $APP_NAME/public/manifest.json
 
-## Files from /scripts
-mv $TEMPLATE_DIR/scripts $APP_NAME
-
-## Files from /cypress
-mv $TEMPLATE_DIR/cypress $APP_NAME
-
-## Files from /client
+## Files from /src
 rm -rf $APP_NAME/src
-mv $TEMPLATE_DIR/client  $APP_NAME/client/
+mv $TEMPLATE_DIR/src  $APP_NAME/src/
 
-echo '********** DONE CREATING Ocean DAPP LAYER **********'
+
+echo '********** DONE CREATING DAPP LAYER **********'
 echo '**********************************************'
 echo
 echo '********** 3. INSTALLING DEPENDENCIES ********'
@@ -72,7 +60,11 @@ echo
 echo '********** QUICK START NEXT STEPS ************'
 echo
 echo 'cd ' $APP_NAME
-echo 'npm install'
+echo 'npm run ganache'
+echo
+echo '*** (IN A SEPARATE SHELL RUN) ***'
+echo
+echo 'npm run migrate'
 echo 'npm start'
 echo
-echo '********** Happy Building! ********************'
+echo '********** Happy Dapping! ********************

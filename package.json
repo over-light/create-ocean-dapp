@@ -20,7 +20,7 @@
   "author": {
     "name": "snaketh4x0r"
   },
-  "bin": "scripts/create-ocean-dapp",
+  "bin": "scripts/create-ocean-project",
   "repository": "github:snaketh4x0r/create-ocean-dapp",
   "files": [
     "scripts",
@@ -31,8 +31,5 @@
   },
   "devDependencies": {
     "markdown-toc": "^1.2.0"
-  },
-  "dependencies": {
-    "user": "0.0.0"
   }
 }
