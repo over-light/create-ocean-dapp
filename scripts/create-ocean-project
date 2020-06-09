@@ -29,9 +29,6 @@ node $TEMPLATE_DIR/../scripts/merge_package.js $TEMPLATE_DIR/ `pwd`/$APP_NAME/
 mv $APP_NAME/README.md $APP_NAME/REACT.md
 mv $TEMPLATE_DIR/TEMPLATE.md  $APP_NAME/README.md
 
-## Files from /dapp
-mv $TEMPLATE_DIR/dapp $APP_NAME
-
 ## Files from /public
 mv $TEMPLATE_DIR/public/favicon.ico $APP_NAME/public
 mv $TEMPLATE_DIR/public/index.html $APP_NAME/public/index.html

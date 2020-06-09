@@ -1,7 +1,0 @@
-@import '../../styles/variables';
-
-.actions {
-    display: grid;
-    gap: $spacer / 2;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
